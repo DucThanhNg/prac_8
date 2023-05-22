@@ -57,7 +57,9 @@ Heap<T>::Heap(std::vector<T> start_values) {
 template <typename T>
 void Heap<T>::insert(T value) {
    // TO BE IMPLEMENTED
+  values.push_back(value);
 }
+
 /*******************************/
 /* delete values from the heap */
 /*******************************/
@@ -74,6 +76,7 @@ void Heap<T>::remove(T value) {
 template <typename T>
 T Heap<T>::getMin() {
   // TO BE IMPLEMENTED
+  return values.front();
 }
 
 /*******************************/
