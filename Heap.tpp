@@ -60,17 +60,16 @@ void Heap<T>::insert(T value) {
   values.push_back(value);
   int newValueIndex = value.size() - 1;
 
-  while (newValueIndex > 0){
+  while (newValueIndex > 1){
     int parentIndex = (newValueIndex - 1) / 2;
     if(values[parentIndex] > values[newValueIndex]){
-      std::swap(values[parentIndex], values[newValueIndex]);
+      swap(values[parentIndex], values[newValueIndex]);
       newValueIndex = parentIndex;
     }
     else{
       break;
     }
-  
- }
+  }
 }
 
 /*******************************/
@@ -80,6 +79,7 @@ void Heap<T>::insert(T value) {
 template <typename T>
 void Heap<T>::remove(T value) {
   // TO BE IMPLEMENTED
+
 }
 
 /*******************************/
