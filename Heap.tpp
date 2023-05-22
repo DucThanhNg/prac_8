@@ -79,6 +79,14 @@ void Heap<T>::insert(T value) {
 template <typename T>
 void Heap<T>::remove(T value) {
   // TO BE IMPLEMENTED
+  if (std::find(values.begin(), values.end(), value) == values.end()){
+    return -1;
+  }
+
+  int lastElement = values.back();
+  values.pop_back();
+  int i = std::distance(values.begin(),lastElement);
+  heapify(lastElement);
 
 }
 
